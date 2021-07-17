@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="javaScipt/Bank.js" defer></script>
+    <link rel="stylesheet" href="css/Bank.css">
+    <link rel="stylesheet" href="css/box.css">
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add-acc">
+        <div class="modal__content">
+            <label for="FirstName">FirstName
+                <input type="text" name="fName" id="fName" />
+                <span id="fNameE"></span></label>
+            <label for="LastName">LastName
+                <input type="text" name="lName" id="lName" />
+                <span id="lNameE"></span></label>
+            <label for="MobileNO">MobileNo
+                <input type="tel" name="mNO" id="mNO" required />
+                <span id="mNOE"></span></label>
+            <label for="City">City
+                <input type="text" name="city" id="city" />
+                <span id="cityE"></span></label>
+            <label for="Email">Email
+                <input type="tetx" name="email" id="email" />
+                <span id="emailE"></span></label>
+            <label for="Password">Password
+                <input type="password" name="password" id="password" />
+                <span id="passE"></span></label>
+            <label for="Amount">Deposit Amount
+                <input type="number" name="amount" id="amount" />
+                <span id="amtE"></span></label>
+        </div>
+        <div class="modal__actions">
+            <button class="btn btn--passive" onclick="addAccount()">Cancel</button>
+            <button class="btn btn--success" onclick="addUser()">Add</button>
+        </div>
+    </div>
+    <header>
+        <h1>Your Piggi Bank</h1>
+        <button id="add-movie-btn" class="btn">ADD ACCOUNT</button>
+        <button id="logout-movie-btn" class="btn1">LOGOUT</button>
+    </header>
+    <main>
+        <section id="entry-text" class="card">
+            <h1 id="wcMsg"></h1>
+        </section>
+        <ul id="movie-list"></ul>
+    </main>
+
+    <div>
+        <div class="modal1" id="login">
+            <div class="modal1__content">
+                <h1>Login</h1>
+                <hr>
+                <label for="email">UserName</label>
+                <input type="text" name="email" id="l_id" />
+                <label for="password">Password</label>
+                <input type="password" name="password" id="l_pass" />
+            </div>
+            <div class="modal__actions">
+                <button class="btn btn--success" onclick="checkLogin()">Login</button>
+                <span id="inValid"></span>
+            </div>
+        </div>
+    </div>
+    <div class="main__card" id="boxes">
+        <div class="card__card">
+            <div class="head__card" >
+              <h2>Total Amount</h2> 
+              <h1 id="bankBalance"></h1>
+            </div>
+        </div>
+        <div class="card__card">
+            <div class="head__card" id="boxes1">
+               <h2>withdrawal Amount</h2> 
+               <input type="text" class="txt" id="wAmount" placeholder="$ Amount" />
+               <span id="wAmtE"></span>
+               <button class="btn" id='wAmtBtn'>withdrawal</button>
+            </div>
+        </div>
+        <div class="card__card">
+            <div class="head__card" id="boxes2">
+               <h2>deposit Amount</h2>
+               <input type="text" class="txt" id="dAmount" placeholder="$ Amount">
+               <button class="btn" id='dAmtBtn'>Deposit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
